@@ -1,0 +1,16 @@
+{
+  "name": "nodesockets",
+  "version": "1.0.0",
+  "description": "android socket application",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "sreejesh pillai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "nodemon": "^1.3.7",
+    "socket.io": "^1.3.5"
+  }
+}
