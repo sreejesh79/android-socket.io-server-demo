@@ -11,12 +11,13 @@ io.on('connection',function(socket){
     console.log('one user connected '+socket.id);
     socket.on('message',function(data){
         var sockets = io.sockets.sockets;
-        sockets.forEach(function(sock){
+        /*sockets.forEach(function(sock){
             if(sock.id != socket.id)
             {
                 sock.emit('message',data);
             }
-        })
+        })*/
+        socket.broadcast.emit('message', data);
     })
     socket.on('disconnect',function(){
         console.log('one user disconnected '+socket.id);
